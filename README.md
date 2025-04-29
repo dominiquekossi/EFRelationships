@@ -44,3 +44,34 @@ O projeto está organizado da seguinte forma:
 O banco de dados é configurado no arquivo `appsettings.json`. Certifique-se de ajustar a string de conexão conforme necessário.
 
 Exemplo de configuração :
+"ConnectionStrings": { "DefaultConnection": "Server=localhost;Database=EFRelationships;Trusted_Connection=True;" }
+
+### Migrações
+
+### Migrações
+As migrações estão localizadas na pasta `Migrations`. Para aplicar as migrações, use o comando:dotnet ef database update
+
+
+---
+
+## Endpoints Disponíveis
+
+### One-to-One
+- **GET** `/api/onetoone`
+- **POST** `/api/onetoone`
+
+### One-to-Many
+- **GET** `/api/onetomany`
+- **POST** `/api/onetomany`
+
+### Many-to-Many
+- **GET** `/api/manytomany`
+- **POST** `/api/manytomany`
+
+---
+
+## Como Executar o Projeto
+1. Certifique-se de que o .NET 9 está instalado.
+2. Configure a string de conexão no `appsettings.json`.
+3. Execute as migrações:dotnet ef database update.
+4. Inicie o projeto:dotnet run
